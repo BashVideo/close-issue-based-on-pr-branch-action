@@ -1,0 +1,13 @@
+name: Append "closes #xx" to PR
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  append_to_description:
+    runs-on: ubuntu-latest
+    name: Append to PR description
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/close-issue-based-on-pr-branch-action@v1
