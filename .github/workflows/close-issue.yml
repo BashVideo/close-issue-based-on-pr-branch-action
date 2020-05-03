@@ -1,7 +1,7 @@
 name: Append "closes #xx" to PR
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -10,4 +10,4 @@ jobs:
     name: Append to PR description
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/close-issue-based-on-pr-branch-action@v1
+    - uses: MoonriseCo/close-issue-based-on-pr-branch-action
