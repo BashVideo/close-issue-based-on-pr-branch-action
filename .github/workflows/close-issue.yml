@@ -10,4 +10,4 @@ jobs:
     name: Append to PR description
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: MoonriseCo/close-issue-based-on-pr-branch-action
+    - uses: MoonriseCo/close-issue-based-on-pr-branch-action@v1
