@@ -1,0 +1,23 @@
+{
+  "name": "close-issue-based-on-pr-branch-action",
+  "version": "1.0.0",
+  "description": "An action triggered by a PR that looks at branch number and appends \"closes #xx\" to the description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonriseCo/close-issue-based-on-pr-branch-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoonriseCo/close-issue-based-on-pr-branch-action/issues"
+  },
+  "homepage": "https://github.com/MoonriseCo/close-issue-based-on-pr-branch-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.1.1"
+  }
+}
