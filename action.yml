@@ -1,0 +1,5 @@
+name: 'Add Closes Issue Based on PR Branch'
+description: 'Add "closes #xx" based on branch name "xx-branch-name"'
+  runs:
+    using: 'node14'
+    main: 'index.js'
