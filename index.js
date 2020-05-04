@@ -16,6 +16,7 @@ const issueNumber = branchName.match(/^[0-9]+/)[0];
 const message = `\nCloses #${issueNumber}`;
 body = body.concat(message);
 
+console.log(process.env);
 const graphqlWithAuth = graphql.defaults({
   headers: {
     authorization: `token ${process.env.GITHUB_TOKEN}`
