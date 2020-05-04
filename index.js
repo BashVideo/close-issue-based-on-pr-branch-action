@@ -25,21 +25,24 @@ const graphqlWithAuth = graphql.defaults({
   }
 });
 
-async function mutatePullRequest() {
-  const result = await graphqlWithAuth(
-  `
-  mutation updatePullRequestBody {
-    updatePullRequest(input: {
-      pullRequestId:"${pullRequestId}",
-      body:"${body}"
-    }) {
-      pullRequest {
-        id
-      }
+console.log(`pullRequestId: ${pull_request}`);
+const mutation = 
+`
+mutation updatePullRequestBody {
+  updatePullRequest(input: {
+    pullRequestId:"${pullRequestId}",
+    body:"${body}"
+  }) {
+    pullRequest {
+      id
     }
   }
-  `
-  );
+}
+`;
+console.log(mutation)
+
+async function mutatePullRequest() {
+  const result = await graphqlWithAuth(mutation);
 }
 
 mutatePullRequest();
