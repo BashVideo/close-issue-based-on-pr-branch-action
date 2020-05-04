@@ -40,5 +40,5 @@ async function mutatePullRequest() {
   );
 }
 
-mutatePullRequest();
+// mutatePullRequest();
 
