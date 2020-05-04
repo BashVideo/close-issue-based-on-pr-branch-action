@@ -9,11 +9,10 @@ on:
       - master
 
 jobs:
-  hello_world_job:
+  update_pull_request:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - name: Edit PR description
+      - name: Update pull request
         id: pr
         uses: MoonriseCo/close-issue-based-on-pr-branch-action@master
         with:
