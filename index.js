@@ -9,7 +9,7 @@ const ev = JSON.parse(
 
 const owner = ev.repository.owner.login;
 const repo = ev.repository.name;
-const pullRequestId = ev.pull_request.id;
+const pullRequestId = ev.pull_request.node_id;
 let body = ev.pull_request.body;
 
 const branchName = ev.pull_request.head.ref;
