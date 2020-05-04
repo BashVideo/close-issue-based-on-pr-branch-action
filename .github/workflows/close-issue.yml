@@ -10,5 +10,5 @@ jobs:
     name: Append to PR description
     steps:
       - uses: actions/checkout@v1      
-      - uses: ./close-issue
+      - uses: ./append-closes-issue
 
