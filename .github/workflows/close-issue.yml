@@ -9,6 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Append to PR description
     steps:
-      - uses: actions/checkout@v1      
-      - uses: ./append-closes-issue
+      - uses: MoonriseCo/close-issue-based-on-pr-branch-action@master
 
