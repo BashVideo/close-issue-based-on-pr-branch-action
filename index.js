@@ -10,7 +10,7 @@ console.log(ev)
 const prNum = ev.pull_request.number
 console.log(`pull request ${prNum}`)
 
-const branchName = ev.
+const branchName = ev.branch_name
 console.log(`branch name ${branchName}`) 
 
 // branchName.match(/^[0-9]+/)[0]
