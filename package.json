@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/MoonriseCo/close-issue-based-on-pr-branch-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
-    "@actions/github": "^2.1.1"
+    "@octokit/graphql": "^4.3.1"
   }
 }
