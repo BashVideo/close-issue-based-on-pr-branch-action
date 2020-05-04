@@ -1,5 +1,6 @@
 # close-issue-based-on-pr-branch-action
-An action triggered by a PR that looks at branch number and appends "closes #xx" to the description
+An action triggered by a PR that looks at branch number and appends "closes #xx" to the description.
+It uses the leading digits of the branch name as the issue number.
 
 Example usage:
 ```
