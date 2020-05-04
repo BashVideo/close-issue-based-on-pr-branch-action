@@ -25,7 +25,7 @@ const graphqlWithAuth = graphql.defaults({
   }
 });
 
-console.log(`pullRequestId: ${pull_requestId}`);
+console.log(`pullRequestId: ${pullRequestId}`);
 const mutation = 
 `
 mutation updatePullRequestBody {
