@@ -1,3 +1,4 @@
+const core = require('@actions/core');
 const { graphql } = require("@octokit/graphql")
 const fs = require('fs');
 
@@ -16,29 +17,30 @@ const issueNumber = branchName.match(/^[0-9]+/)[0];
 const message = `\nCloses #${issueNumber}`;
 body = body.concat(message);
 
-console.log(process.env);
-// const graphqlWithAuth = graphql.defaults({
-//   headers: {
-//     authorization: `token ${process.env.GITHUB_TOKEN}`
-//   }
-// });
+const githubToken = core.getInput('github-token')
+console.log(`githubToken: ${githubToken}`);
+const graphqlWithAuth = graphql.defaults({
+  headers: {
+    authorization: `token ${githubToken}`
+  }
+});
 
-// async function mutatePullRequest() {
-//   const result = await graphqlWithAuth(
-//   `
-//   mutation updatePullRequestBody {
-//     updatePullRequest(input: {
-//       pullRequestId:"${pullRequestId}",
-//       body:"${body}"
-//     }) {
-//       pullRequest {
-//         id
-//       }
-//     }
-//   }
-//   `
-//   );
-// }
+async function mutatePullRequest() {
+  const result = await graphqlWithAuth(
+  `
+  mutation updatePullRequestBody {
+    updatePullRequest(input: {
+      pullRequestId:"${pullRequestId}",
+      body:"${body}"
+    }) {
+      pullRequest {
+        id
+      }
+    }
+  }
+  `
+  );
+}
 
-// mutatePullRequest();
+mutatePullRequest();
 
