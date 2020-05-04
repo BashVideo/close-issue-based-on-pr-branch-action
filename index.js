@@ -11,9 +11,9 @@ const prNum = ev.pull_request.number;
 console.log(`pull request: ${prNum}`);
 
 const branchName = ev.pull_request.head.ref;
-console.log(`branch name: ${branchName}`);
 
 branchName.match(/^[0-9]+/)[0];
 num = branchName.match(/^[0-9]+/)[0];
 message = `Closes #${num}`;
-console.log(`message ${message}`)
+console.log(`message: ${message}`);
+
