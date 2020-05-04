@@ -7,8 +7,6 @@ const ev = JSON.parse(
   fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8')
 );
 
-const owner = ev.repository.owner.login;
-const repo = ev.repository.name;
 const pullRequestId = ev.pull_request.node_id;
 let body = ev.pull_request.body;
 
