@@ -2,7 +2,7 @@ name: Append "closes #xx" to PR
 
 on:
   push:
-    branches: *
+    branches: /refs/heads/*
 
 jobs:
   append_to_description:
